@@ -1,0 +1,15 @@
+.container {
+    width: 350px;
+}
+
+.date,
+.clock,
+.loading {
+    width: 18px;
+    height: 18px;
+}
+
+.utc-date,
+.utc-time {
+    font-size: 14px;
+}

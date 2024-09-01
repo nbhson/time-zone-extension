@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles/lib/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/popup.css">
+        <title>My Extension</title>
+    </head>
+    <body>
+        <div class="container m-0 p-0">
+
+            <div
+                class="accordion"
+                id="accordionPanelsStayOpenExample"
+            >
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseZero"
+                            aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseZero"
+                        >
+                            <img
+                                src="./images/clock.svg"
+                                alt
+                                srcset
+                                class="clock me-3"
+                            >
+                            <strong>UTC</strong>
+                        </button>
+                    </h2>
+                    <div
+                        id="panelsStayOpen-collapseZero"
+                        class="accordion-collapse collapse show"
+                        style
+                    >
+                        <div
+                            class="accordion-body d-flex align-items-center"
+                            id="utc"
+                        >
+                            <div
+                                class="text-secondary d-flex justify-content-center align-items-center w-100"
+                                type="button"
+                                disabled
+                            >
+                                <span
+                                    class="spinner-grow spinner-grow-sm me-2"
+                                    aria-hidden="true"
+                                ></span>
+                                <span role="status">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne"
+                            aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne"
+                        >
+                            <img
+                                src="./images/clock.svg"
+                                alt
+                                srcset
+                                class="clock me-3"
+                            >
+                            <strong>Vietnam</strong>
+                        </button>
+                    </h2>
+                    <div
+                        id="panelsStayOpen-collapseOne"
+                        class="accordion-collapse collapse show"
+                        style
+                    >
+                        <div
+                            class="accordion-body d-flex align-items-center"
+                            id="vietnam"
+                        >
+                            <div
+                                class="text-secondary d-flex justify-content-center align-items-center w-100"
+                                type="button"
+                                disabled
+                            >
+                                <span
+                                    class="spinner-grow spinner-grow-sm me-2"
+                                    aria-hidden="true"
+                                ></span>
+                                <span role="status">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo"
+                            aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseTwo"
+                        >
+                            <img
+                                src="./images/clock.svg"
+                                alt
+                                srcset
+                                class="clock me-3"
+                            >
+                            <strong>India</strong>
+                        </button>
+                    </h2>
+                    <div
+                        id="panelsStayOpen-collapseTwo"
+                        class="accordion-collapse collapse show"
+                        style
+                    >
+                        <div
+                            class="accordion-body d-flex align-items-center"
+                            id="india"
+                        >
+                            <div
+                                class="text-secondary d-flex justify-content-center align-items-center w-100"
+                                type="button"
+                                disabled
+                            >
+                                <span
+                                    class="spinner-grow spinner-grow-sm me-2"
+                                    aria-hidden="true"
+                                ></span>
+                                <span role="status">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree"
+                            aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseThree"
+                        >
+                            <img
+                                src="./images/clock.svg"
+                                alt
+                                srcset
+                                class="clock me-3"
+                            >
+                            <strong>Ireland</strong>
+                        </button>
+                    </h2>
+                    <div
+                        id="panelsStayOpen-collapseThree"
+                        class="accordion-collapse collapse show"
+                        style
+                    >
+                        <div
+                            class="accordion-body d-flex align-items-center"
+                            id="ireland"
+                        >
+                            <div
+                                class="text-secondary d-flex justify-content-center align-items-center w-100"
+                                type="button"
+                                disabled
+                            >
+                                <span
+                                    class="spinner-grow spinner-grow-sm me-2"
+                                    aria-hidden="true"
+                                ></span>
+                                <span role="status">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-2 mb-2">
+                <span class="badge rounded-pill text-bg-light">-- Son Nguyen</span>
+            </div>
+        </div>
+        <script src="./scripts/lib/moment.min.js"></script>
+        <script src="./scripts/lib/moment-timezone-with-data.min.js"></script>
+        <script src="./scripts/lib/bootstrap.min.js"></script>
+        <script
+            src="./scripts/popup.js"
+            type="module"
+        ></script>
+    </body>
+</html>
