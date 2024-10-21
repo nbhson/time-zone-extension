@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function generateTimeCovert(target, id) {
-        const [irelandDate, irelandTime, utcPeriods] = moment.tz('Europe/Dublin').format(format).split(" ");
-        const irelandCurrentTime = moment.tz(`${irelandDate} ${timeString}`, format, 'Europe/Dublin');
-        const [targetDate, targetTime] = irelandCurrentTime.tz(target).format(format).split(" ");
+        const [irelandDate, irelandTime, irePeriods] = moment.tz('Europe/Dublin').format(format).split(" ");
+        const irelandCurrentTime = moment.tz(`${irelandDate} ${timeString}:00`, format, 'Europe/Dublin');
+        const [targetDate, targetTime, utcPeriods] = irelandCurrentTime.tz(target).format(format).split(" ");
         id.innerHTML = `
         <span 
             class="badge badge-custom d-flex justify-content-center align-items-center text-bg-light text-success convert-time"
