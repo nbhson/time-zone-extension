@@ -7,181 +7,174 @@
         <title>My Extension</title>
     </head>
     <body>
-        <div class="container m-0 p-0">
+        <div class="container">
 
-            <div
-                class="accordion"
-                id="accordionPanelsStayOpenExample"
-            >
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseZero"
-                            aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseZero"
-                        >
-                            <img
-                                src="./images/clock.svg"
-                                alt
-                                srcset
-                                class="clock me-3"
-                            >
-                            <strong>UTC</strong>
-                        </button>
-                    </h2>
-                    <div
-                        id="panelsStayOpen-collapseZero"
-                        class="accordion-collapse collapse show"
-                        style
-                    >
+            <div class="card mb-3 mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <label for="appointment-time">Time format</label>
+                    <div>
                         <div
-                            class="accordion-body d-flex align-items-center"
-                            id="utc"
+                            class="btn-group"
+                            role="group"
+                            aria-label="Basic radio toggle button group"
                         >
-                            <div
-                                class="text-secondary d-flex justify-content-center align-items-center w-100"
-                                type="button"
-                                disabled
+                            <input
+                                type="radio"
+                                class="btn-check"
+                                name="btnradio"
+                                id="btnRadio24h"
+                                autocomplete="off"
                             >
-                                <span
-                                    class="spinner-grow spinner-grow-sm me-2"
-                                    aria-hidden="true"
-                                ></span>
-                                <span role="status">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne"
-                            aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne"
-                        >
-                            <img
-                                src="./images/clock.svg"
-                                alt
-                                srcset
-                                class="clock me-3"
+                            <label
+                                class="btn btn-outline-primary"
+                                for="btnRadio24h"
                             >
-                            <strong>Vietnam</strong>
-                        </button>
-                    </h2>
-                    <div
-                        id="panelsStayOpen-collapseOne"
-                        class="accordion-collapse collapse show"
-                        style
-                    >
-                        <div
-                            class="accordion-body d-flex align-items-center"
-                            id="vietnam"
-                        >
-                            <div
-                                class="text-secondary d-flex justify-content-center align-items-center w-100"
-                                type="button"
-                                disabled
+                                24h
+                            </label>
+
+                            <input
+                                type="radio"
+                                class="btn-check"
+                                name="btnradio"
+                                id="btnRadio12h"
+                                autocomplete="off"
                             >
-                                <span
-                                    class="spinner-grow spinner-grow-sm me-2"
-                                    aria-hidden="true"
-                                ></span>
-                                <span role="status">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo"
-                            aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseTwo"
-                        >
-                            <img
-                                src="./images/clock.svg"
-                                alt
-                                srcset
-                                class="clock me-3"
+                            <label
+                                class="btn btn-outline-primary"
+                                for="btnRadio12h"
                             >
-                            <strong>India</strong>
-                        </button>
-                    </h2>
-                    <div
-                        id="panelsStayOpen-collapseTwo"
-                        class="accordion-collapse collapse show"
-                        style
-                    >
-                        <div
-                            class="accordion-body d-flex align-items-center"
-                            id="india"
-                        >
-                            <div
-                                class="text-secondary d-flex justify-content-center align-items-center w-100"
-                                type="button"
-                                disabled
-                            >
-                                <span
-                                    class="spinner-grow spinner-grow-sm me-2"
-                                    aria-hidden="true"
-                                ></span>
-                                <span role="status">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button
-                            class="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree"
-                            aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseThree"
-                        >
-                            <img
-                                src="./images/clock.svg"
-                                alt
-                                srcset
-                                class="clock me-3"
-                            >
-                            <strong>Ireland</strong>
-                        </button>
-                    </h2>
-                    <div
-                        id="panelsStayOpen-collapseThree"
-                        class="accordion-collapse collapse show"
-                        style
-                    >
-                        <div
-                            class="accordion-body d-flex align-items-center"
-                            id="ireland"
-                        >
-                            <div
-                                class="text-secondary d-flex justify-content-center align-items-center w-100"
-                                type="button"
-                                disabled
-                            >
-                                <span
-                                    class="spinner-grow spinner-grow-sm me-2"
-                                    aria-hidden="true"
-                                ></span>
-                                <span role="status">Loading...</span>
-                            </div>
+                                12h
+                            </label>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="card mb-3 mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <label for="appointment-time">Choose time</label>
+                    <input
+                        id="appointment-time"
+                        type="time"
+                        name="appointment-time"
+                        value="00:00"
+                        class="form-control w-25"
+                    >
+                </div>
+            </div>
+
+            <ul class="list-group">
+                <li class="list-group-item d-flex">
+                    <div class="me-3 country d-flex">
+                        <img
+                            src="./images/clock.svg"
+                            alt
+                            srcset
+                            class="clock me-3 mt-1"
+                        >
+                        <strong>UTC</strong>
+                    </div>
+                    <div
+                        class="accordion-body d-flex align-items-center w-100"
+                        id="utc"
+                    >
+                        <div
+                            class="text-secondary d-flex justify-content-center align-items-center w-100"
+                            type="button"
+                            disabled
+                        >
+
+                            <span
+                                class="spinner-grow spinner-grow-sm me-2"
+                                aria-hidden="true"
+                            ></span>
+                            <span role="status">Loading...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex">
+                    <div class="me-3 country d-flex">
+                        <img
+                            src="./images/clock.svg"
+                            alt
+                            srcset
+                            class="clock me-3 mt-1"
+                        >
+                        <strong>Vietnam</strong>
+                    </div>
+                    <div
+                        class="accordion-body d-flex align-items-center w-100"
+                        id="vietnam"
+                    >
+                        <div
+                            class="text-secondary d-flex justify-content-center align-items-center w-100"
+                            type="button"
+                            disabled
+                        >
+                            <span
+                                class="spinner-grow spinner-grow-sm me-2"
+                                aria-hidden="true"
+                            ></span>
+                            <span role="status">Loading...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex">
+                    <div class="me-3 country d-flex">
+                        <img
+                            src="./images/clock.svg"
+                            alt
+                            srcset
+                            class="clock me-3 mt-1"
+                        >
+                        <strong>India</strong>
+                    </div>
+                    <div
+                        class="accordion-body d-flex align-items-center w-100"
+                        id="india"
+                    >
+                        <div
+                            class="text-secondary d-flex justify-content-center align-items-center w-100"
+                            type="button"
+                            disabled
+                        >
+                            <span
+                                class="spinner-grow spinner-grow-sm me-2"
+                                aria-hidden="true"
+                            ></span>
+                            <span role="status">Loading...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex">
+                    <div class="me-3 country d-flex">
+                        <img
+                            src="./images/clock.svg"
+                            alt
+                            srcset
+                            class="clock me-3 mt-1"
+                        >
+                        <strong>Ireland</strong>
+                    </div>
+                    <div
+                        class="accordion-body d-flex align-items-center w-100"
+                        id="ireland"
+                    >
+                        <div
+                            class="text-secondary d-flex justify-content-center align-items-center w-100"
+                            type="button"
+                            disabled
+                        >
+                            <span
+                                class="spinner-grow spinner-grow-sm me-2"
+                                aria-hidden="true"
+                            ></span>
+                            <span role="status">Loading...</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
 
             <div class="d-flex justify-content-end mt-2 mb-2">
                 <span class="badge rounded-pill text-bg-light">-- Son Nguyen</span>

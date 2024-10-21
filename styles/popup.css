@@ -1,5 +1,5 @@
 .container {
-    width: 350px;
+    width: 460px;
 }
 
 .date,
@@ -12,4 +12,12 @@
 .utc-date,
 .utc-time {
     font-size: 14px;
+}
+
+.country {
+    min-width: 120px
+}
+
+.badge-custom {
+    height: 27px;
 }
