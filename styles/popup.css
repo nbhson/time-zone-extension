@@ -21,3 +21,12 @@
 .badge-custom {
     height: 27px;
 }
+
+.convert-time {
+    font-size: 14px;
+}
+
+.clock-convert {
+    width: 15px;
+    height: 15px;
+}

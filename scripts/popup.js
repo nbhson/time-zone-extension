@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const vietnamEl = document.getElementById('vietnam');
     const irelandEl = document.getElementById('ireland');
     const indiaEl = document.getElementById('india');
+    const irelandTimeInput = document.getElementById('ireland-time');
+    const convertTimeVN = document.getElementById('convertTimeVN');
+    const convertTimeID = document.getElementById('convertTimeID');
+    let timeString = '00:00'
 
     // config
     const twentyFourFormat = document.getElementById('btnRadio24h');
@@ -12,11 +16,21 @@ document.addEventListener('DOMContentLoaded', function () {
     twelveFormat.addEventListener('click', () => {
         format = 'DD-MMM-YYYY hh:mm:ss A'; // 12h
         localStorage.setItem('format', format)
+        generateTimeCovert('Asia/Ho_Chi_Minh', convertTimeVN)
+        generateTimeCovert('Asia/Kolkata', convertTimeID)
     })
 
     twentyFourFormat.addEventListener('click', () => {
         format = 'DD-MMM-YYYY HH:mm:ss'; // 24h
         localStorage.setItem('format', format)
+        generateTimeCovert('Asia/Ho_Chi_Minh', convertTimeVN)
+        generateTimeCovert('Asia/Kolkata', convertTimeID)
+    })
+
+    irelandTimeInput.addEventListener('change', (input) => {
+        timeString = input.target.value;
+        generateTimeCovert('Asia/Ho_Chi_Minh', convertTimeVN);
+        generateTimeCovert('Asia/Kolkata', convertTimeID)
     })
 
     setRadioButtonFormat();
@@ -49,6 +63,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>`;
     }
 
+    function generateTimeCovert(target, id) {
+        const [irelandDate, irelandTime, irelandPeriods] = moment.tz('Europe/Dublin').format(format).split(" ");
+        const irelandCurrentTime = moment.tz(`${irelandDate} ${timeString}`, format, 'Europe/Dublin');
+        const [targetDate, targetTime] = irelandCurrentTime.tz(target).format(format).split(" ");
+        id.innerHTML = `
+        <span 
+            class="badge badge-custom d-flex justify-content-center align-items-center text-bg-light text-success convert-time"
+        >
+        ${targetTime}
+        <img
+                src="./images/clock.svg"
+                alt
+                srcset
+                class="clock-convert ms-2"
+            >
+       </span>`;
+    }
     function setRadioButtonFormat() {
         if (format === 'DD-MMM-YYYY HH:mm:ss') {
             twentyFourFormat.checked = true;
