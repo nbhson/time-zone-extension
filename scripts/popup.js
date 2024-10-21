@@ -64,14 +64,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function generateTimeCovert(target, id) {
-        const [irelandDate, irelandTime, irelandPeriods] = moment.tz('Europe/Dublin').format(format).split(" ");
+        const [irelandDate, irelandTime, utcPeriods] = moment.tz('Europe/Dublin').format(format).split(" ");
         const irelandCurrentTime = moment.tz(`${irelandDate} ${timeString}`, format, 'Europe/Dublin');
         const [targetDate, targetTime] = irelandCurrentTime.tz(target).format(format).split(" ");
         id.innerHTML = `
         <span 
             class="badge badge-custom d-flex justify-content-center align-items-center text-bg-light text-success convert-time"
         >
-        ${targetTime}
+        ${targetTime} ${utcPeriods ? `<span class="badge text-bg-${utcPeriods === 'PM' ? 'danger' : 'success'} ms-2">${utcPeriods}</span>` : ``}
         <img
                 src="./images/clock.svg"
                 alt
