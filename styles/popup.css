@@ -1,6 +1,202 @@
+:root {
+    --md-sys-color-primary: #6750A4;
+    --md-sys-color-on-primary: #FFFFFF;
+    --md-sys-color-primary-container: #EADDFF;
+    --md-sys-color-on-primary-container: #21005E;
+    --md-sys-color-secondary: #625B71;
+    --md-sys-color-on-secondary: #FFFFFF;
+    --md-sys-color-secondary-container: #E8DEF8;
+    --md-sys-color-on-secondary-container: #1E192B;
+    --md-sys-color-tertiary: #7D5260;
+    --md-sys-color-on-tertiary: #FFFFFF;
+    --md-sys-color-tertiary-container: #FFD8E4;
+    --md-sys-color-on-tertiary-container: #370B1E;
+    --md-sys-color-error: #B3261E;
+    --md-sys-color-on-error: #FFFFFF;
+    --md-sys-color-error-container: #F9DEDC;
+    --md-sys-color-on-error-container: #410E0B;
+    --md-sys-color-surface: #FFFBFE;
+    --md-sys-color-on-surface: #1C1B1F;
+    --md-sys-color-surface-variant: #E7E0EC;
+    --md-sys-color-on-surface-variant: #49454F;
+    --md-sys-color-outline: #79747E;
+    --md-sys-color-outline-variant: #CAC4D0;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #313033;
+    --md-sys-color-inverse-on-surface: #F4EFF4;
+    --md-sys-color-inverse-primary: #D0BCFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    margin: 0;
+    padding: 16px;
+    min-width: 400px;
+}
+
 .container {
     width: 460px;
+    padding: 0;
 }
+
+.card {
+    background-color: var(--md-sys-color-surface);
+    border: 1px solid var(--md-sys-color-outline-variant);
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.card-header {
+    background-color: var(--md-sys-color-surface-variant);
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+    padding: 16px;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.material-select {
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 8px;
+    padding: 8px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    min-width: 200px;
+}
+
+.material-select:focus {
+    border-color: var(--md-sys-color-primary);
+    box-shadow: 0 0 0 2px var(--md-sys-color-primary-container);
+}
+
+.material-btn {
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.material-btn:hover {
+    background-color: var(--md-sys-color-surface-variant);
+}
+
+.btn-check:checked + .material-btn {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border-color: var(--md-sys-color-primary);
+}
+
+.material-input {
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 8px;
+    padding: 8px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+.material-input:focus {
+    border-color: var(--md-sys-color-primary);
+    box-shadow: 0 0 0 2px var(--md-sys-color-primary-container);
+}
+
+.material-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--md-sys-color-on-surface);
+    font-weight: 500;
+}
+
+.material-list {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.list-group-item {
+    position: relative;
+    border: 1px solid var(--md-sys-color-outline-variant);
+    padding: 16px;
+    background-color: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.list-group-item.can-remove:hover {
+    background-color: var(--md-sys-color-error-container);
+}
+
+.list-group-item.can-remove:hover .country strong {
+    color: var(--md-sys-color-error);
+}
+
+.list-group-item:not(:last-child) {
+    border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.material-badge {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.material-badge-primary {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.utc-time {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.convert-time {
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.material-icons {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* Loading animation */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.material-icons.hourglass_empty {
+    animation: spin 1s linear infinite;
+}
+
 
 .date,
 .clock,
